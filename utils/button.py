@@ -43,3 +43,13 @@ class Button:
     def draw(self,win):
         pygame.draw.rect(win,self.top_color,self.top_rect,border_radius=12)
         win.blit(self.text_surf,self.text_rect)
+        pos = pygame.mouse.get_pos()
+        action=False
+        if self.top_rect.collidepoint(pos):
+            if pygame.mouse.get_pressed()[0] == 1 and self.clicked == False:
+                self.clicked = True
+                action = True
+        if pygame.mouse.get_pressed()[0] == 0:
+            self.clicked = False
+
+        return action    

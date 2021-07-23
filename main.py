@@ -1,5 +1,5 @@
 from typing import NewType
-from utils.array_init import init_random_array
+from utils.array_init import init_random_array, reset_array
 from utils.button import Button
 from pygame import Color, init
 from utils import *
@@ -35,9 +35,11 @@ def draw_grid(win,grid):
 def draw(win,grid):
     win.fill(BG_COLOR)
     draw_grid(win,grid)
-    if(run_button.draw(WIN)):
+    if(create_button.draw(WIN)):
         init_random_array(grid)
-    create_button.draw(WIN)    
+    run_button.draw(WIN)
+    if(reset_button.draw(WIN)):
+        reset_array(grid)  
     pygame.display.update()
 
 running = True #create the running var
@@ -47,8 +49,8 @@ grid = init_grid(ROWS,COLS,WHITE)#create the grid of pixels to be filled
 
 # create button instances #
 run_button=button.Button_img(img_run,10,615,0.15,None)
-create_button=button.Button('create',200,40,(400,630))
-
+create_button=button.Button('create',200,40,(390,630))
+reset_button=button.Button('reset',200,40,(170,630))
 
 while running:
     clock.tick(FPS)
