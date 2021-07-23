@@ -6,7 +6,7 @@ from utils import *
 
 WIN = pygame.display.set_mode((WIDTH,HEIGHT))
 pygame.display.set_caption("Sorting algorithm visualiser")
-img_run = pygame.image.load("play.png").convert_alpha()
+img_run = pygame.image.load("img/play.png").convert_alpha()
 
 
 def init_grid(rows,cols,color):
