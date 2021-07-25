@@ -1,20 +1,21 @@
 import pygame
 pygame.init()
 pygame.font.init()
-
+import time
 WHITE = (255,255,255)
 BLACK = (0,0,0)
 GREY = (53,53,53)
 BUTTON = (71, 95, 119)
-
+RED = (255,0,0)
 WIDTH,HEIGHT = 600,700
 
 FPS = 144
 ROWS = COLS = 100
 TOOLBAR_HEIGHT = HEIGHT-WIDTH
 PIXEL_SIZE = 6
-DRAW_LINES = True
+DRAW_LINES = False
 LIST_LEN = 100
+
 
 BG_COLOR = GREY
 
