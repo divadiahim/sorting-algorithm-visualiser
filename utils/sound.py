@@ -15,7 +15,7 @@ class Note(Sound):
         self.frequency = frequency
         Sound.__init__(self, self.build_samples())
         self.set_volume(volume)
-        pygame.time.delay(10)
+        pygame.time.delay(5)
         pygame.mixer.stop()
     def build_samples(self):
         period = int(round(get_init()[0] / self.frequency))

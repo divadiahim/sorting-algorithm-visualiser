@@ -4,12 +4,12 @@ def bubble_sort(win,randomlist):
     pre_init(44100, -16, 1, 1024)
     n = len(randomlist)
     # Traverse through all randomlistay elements
-    for i in range(n):
+    for i in range(n-1):
     # range(n) also work but outer loop will repeat one time more than needed.
           
         # Last i elements are already in place
        
-        for j in range(0, n-1):
+        for j in range(0, n-i-1):
             # 
             # traverse the randomlistay from 0 to n-i-1
             # Swap if the element found is greater

@@ -66,6 +66,7 @@ while running:
     if (run_button.draw(WIN)):
         #reset_array(WIN,grid)
         sorted_list=bubble_sort(WIN,randomlist)
+        pygame.mixer.stop()
         # print(sorted_list)
 
     pygame.display.flip()
