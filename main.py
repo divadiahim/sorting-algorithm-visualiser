@@ -54,6 +54,7 @@ WIN.fill(BG_COLOR)
 draw_grid(WIN,grid)
 
 while running: 
+    clock.tick(60)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False        
@@ -65,7 +66,7 @@ while running:
     if (run_button.draw(WIN)):
         #reset_array(WIN,grid)
         sorted_list=bubble_sort(WIN,randomlist)
-        print(sorted_list)
+        # print(sorted_list)
 
     pygame.display.flip()
 pygame.quit()            

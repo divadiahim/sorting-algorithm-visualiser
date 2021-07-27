@@ -28,7 +28,8 @@ class init_random_array:
                 
             pygame.draw.rect(self.win,BLACK,(z*PIXEL_SIZE,0,PIXEL_SIZE,PIXEL_SIZE*curr))               
             # pygame.display.update()
-            winsound.Beep(curr*10+137, 10)
+            # 
+            # winsound.Beep(curr*15+137, 40)
      
     
               

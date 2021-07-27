@@ -1,7 +1,10 @@
 import pygame
 pygame.init()
 pygame.font.init()
-import time
+import winsound
+from array import array
+from time import sleep
+from pygame.mixer import Sound, get_init, pre_init
 WHITE = (255,255,255)
 BLACK = (0,0,0)
 GREY = (53,53,53)
