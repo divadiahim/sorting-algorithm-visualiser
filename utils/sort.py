@@ -9,7 +9,7 @@ def bubble_sort(win,randomlist):
           
         # Last i elements are already in place
        
-        for j in range(0, n-i-1):
+        for j in range(0, n-1-i):
             # 
             # traverse the randomlistay from 0 to n-i-1
             # Swap if the element found is greater
@@ -40,5 +40,15 @@ def bubble_sort(win,randomlist):
                 pygame.draw.rect(win,BLACK,(j*PIXEL_SIZE,0,PIXEL_SIZE,PIXEL_SIZE*curr))
                 pygame.draw.rect(win,BLACK,((j+1)*PIXEL_SIZE,0,PIXEL_SIZE,PIXEL_SIZE*curr_1))
                 pygame.display.update()   
-              
-    return randomlist    
+
+       
+    return randomlist 
+
+def verify(win,randomlist):
+    for i in range(len(randomlist)):
+        curr=randomlist[i]
+        pygame.draw.rect(win,GREEN,(i*PIXEL_SIZE,0,PIXEL_SIZE,PIXEL_SIZE*curr))
+        pygame.time.delay(40)
+        pygame.display.update()
+        sound.Note(curr*10).play(-1)
+        

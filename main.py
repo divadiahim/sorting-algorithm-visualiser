@@ -1,5 +1,5 @@
 from typing import NewType
-from utils.sort import bubble_sort
+from utils.sort import bubble_sort, verify
 from utils.array_init import init_random_array, reset_array
 from utils.button import Button
 from pygame import Color, init
@@ -66,6 +66,7 @@ while running:
     if (run_button.draw(WIN)):
         #reset_array(WIN,grid)
         sorted_list=bubble_sort(WIN,randomlist)
+        verify(WIN,randomlist)
         pygame.mixer.stop()
         # print(sorted_list)
 
